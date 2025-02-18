@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hospital>
+    <patients>
+        <patient id="1">
+            <name>
+                <first>John</first>
+                <middle>Michael</middle>
+                <last>Doe</last>
+            </name>
+            <ssn>123-45-6789</ssn>
+            <age>30</age>
+            <room>101</room>
+            <primaryInsurance>
+                <company>Health Insurance Co.</company>
+                <memberId>ABC123456</memberId>
+                <groupNumber>987654</groupNumber>
+                <address>123 Main St, Anytown, USA</address>
+            </primaryInsurance>
+            <secondaryInsurance>
+                <company>Secondary Health Inc.</company>
+                <memberId>XYZ987654</memberId>
+                <groupNumber>123456</groupNumber>
+                <address>456 Elm St, Othertown, USA</address>
+            </secondaryInsurance>
+            <medicalProblems>Hypertension</medicalProblems>
+            <drugAllergies>Penicillin</drugAllergies>
+        </patient>
+        <patient id="2">
+            <name>
+                <first>Jane</first>
+                <middle>Ann</middle>
+                <last>Smith</last>
+            </name>
+            <ssn>987-65-4321</ssn>
+            <age>25</age>
+            <room>102</room>
+            <primaryInsurance>
+                <company>Global Health</company>
+                <memberId>LMN654321</memberId>
+                <groupNumber>654321</groupNumber>
+                <address>789 Oak St, Sometown, USA</address>
+            </primaryInsurance>
+            <secondaryInsurance>
+                <company>Another Health Co.</company>
+                <memberId>QRS123789</memberId>
+                <groupNumber>321654</groupNumber>
+                <address>321 Pine St, Anycity, USA</address>
+            </secondaryInsurance>
+            <medicalProblems>None</medicalProblems>
+            <drugAllergies>None</drugAllergies>
+        </patient>
+        <patient id="3">
+            <name>
+                <first>Emily</first>
+                <middle>Rose</middle>
+                <last>Johnson</last>
+            </name>
+            <ssn>456-78-9012</ssn>
+            <age>40</age>
+            <room>103</room>
+            <primaryInsurance>
+                <company>Best Health</company>
+                <memberId>DEF789012</memberId>
+                <groupNumber>456789</groupNumber>
+                <address>159 Maple St, Newtown, USA</address>
+            </primaryInsurance>
+            <secondaryInsurance>
+                <company>Health First</company>
+                <memberId>TUV456123</memberId>
+                <groupNumber>789123</groupNumber>
+                <address>753 Cedar St, Oldtown, USA</address>
+            </secondaryInsurance>
+            <medicalProblems>Diabetes</medicalProblems>
+            <drugAllergies>Aspirin</drugAllergies>
+        </patient>
+    </patients>
+</hospital>
