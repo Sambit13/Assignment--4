@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Information</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Patient Information</h1>
+    <div id="patients"></div>
+
+    <script>
+        fetch('patients.xml')
+            .then(response => response.text())
+            .then(data => {
+                const parser = new DOMParser();
+                const xmlDoc = parser.parseFromString(data, "text/xml");
+                const patients = xmlDoc.getElementsByTagName("patient");
+                let output = '';
+
+                for (let i = 0; i < patients.length; i++) {
+                    const name = patients[i].getElementsByTagName("name")[0];
+                    const first = name.getElementsByTagName("first")[0].textContent;
+                    const middle = name.getElementsByTagName("middle")[0].textContent;
+                    const last = name.getElementsByTagName("last")[0].textContent;
+                    const ssn = patients[i].getElementsByTagName("ssn")[0].textContent;
+                    const age = patients[i].getElementsByTagName("age")[0].textContent;
+                    const room = patients[i].getElementsByTagName("room")[0].textContent;
+
+                    output += `
+                        <div class="patient">
+                            <h2>${first} ${middle} ${last}</h2>
+                            <p><strong>SSN:</strong> ${ssn}</p>
+                            <p><strong>Age:</strong> ${age}</p>
+                            <p><strong>Room:</strong> ${room}</p>
+                        </div>
+                    `;
+                }
+
+                document.getElementById('patients').innerHTML = output;
+            });
+    </script>
+</body>
+</html>
